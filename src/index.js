@@ -1,1 +1,3 @@
-console.log("hello from index.js")
+import { loadup } from "./page_load.js";
+
+loadup();
