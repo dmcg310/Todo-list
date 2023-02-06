@@ -8,7 +8,20 @@
   </head>
   <body>
     <div id="header"></div>
-    <div id="container"></div>
+    <div id="container">
+      <div id="form-modal" style="display: none">
+        <form id="form">
+          <input type="text" placeholder="title" id="title" />
+          <input type="text" placeholder="description" id="description" />
+          <input type="text" placeholder="due date" id="dueDate" />
+          <input type="text" placeholder="priority" id="priority" />
+          <button type="submit" class="submitForm" id="submitBtn">Add</button>
+        </form>
+      </div>
+    </div>
+    <div id="todo-container">
+      <div id="todo-list"></div>
+    </div>
     <div id="footer"></div>
     <script src="main.js"></script>
   </body>
