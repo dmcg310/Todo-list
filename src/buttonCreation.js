@@ -7,12 +7,7 @@ function buttonCreation() {
   newTodoButton.type = "submit";
   newTodoButton.innerText = "Add";
 
-  const removeTodoButton = document.createElement("button");
-  removeTodoButton.classList = "removeTodoButton";
-  removeTodoButton.type = "sumbit";
-  removeTodoButton.innerText = "Remove";
-
-  containerContent.append(newTodoButton, removeTodoButton);
+  containerContent.append(newTodoButton);
   alterTodo();
 }
 

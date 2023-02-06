@@ -1,9 +1,23 @@
 function displayTodos(todo) {
-  const container = document.querySelector("#container");
-  const todoList = document.createElement("div");
-  todoList.innerText = 
-    todo.title + " " + todo.description + " " + todo.dueDate + " " + todo.priority;
-  container.appendChild(todoList);
+  const todoList = document.getElementById("todo-list");
+  let title = todo.title;
+  let description = todo.description;
+  let dueDate = todo.dueDate;
+  let priority = todo.priority;
+  todoList.innerHTML +=
+    "<h3 class='todo-item'>" +
+    title +
+    description +
+    dueDate +
+    priority +
+    "</h3>";
+  removeTodo();
 }
 
+function removeTodo() {
+  const todoList = document.getElementById("todo-list");
+  todoList.addEventListener("click", (e) => {
+    e.target.remove();
+  });
+}
 export { displayTodos };
