@@ -17,6 +17,7 @@ function arrayToSeperateValues(todoArray) {
   let description = todoArray[1];
   let dueDate = todoArray[2];
   let priority = todoArray[3];
+  priority += " Priority";
   let todo = todoCreation(title, description, dueDate, priority);
   displayTodos(todo);
   todo = "";

@@ -4,12 +4,17 @@ function displayTodos(todo) {
   let description = todo.description;
   let dueDate = todo.dueDate;
   let priority = todo.priority;
+  console.log(title, description, priority, dueDate);
   todoList.innerHTML +=
     "<h3 class='todo-item'>" +
     title +
+    " " +
     description +
+    " " +
     dueDate +
+    " " +
     priority +
+    " " +
     "</h3>";
   removeTodo();
 }
