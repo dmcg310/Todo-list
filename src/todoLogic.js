@@ -7,7 +7,8 @@ function todoCreation(title, description, dueDate, priority) {
     dueDate,
     priority,
     createTodo() {
-      return title + "\n" + description + "\n" + dueDate + "\n" + priority;
+      displayTodos(title, description, dueDate, priority);
+      return { title, description, dueDate, priority };
     },
   };
 }
@@ -17,10 +18,9 @@ function arrayToSeperateValues(todoArray) {
   let description = todoArray[1];
   let dueDate = todoArray[2];
   let priority = todoArray[3];
-  priority += " Priority";
-  let todo = todoCreation(title, description, dueDate, priority);
-  displayTodos(todo);
-  todo = "";
+  let todoItem = todoCreation(title, description, dueDate, priority);
+
+  todoItem.createTodo();
 }
 
 export { arrayToSeperateValues };

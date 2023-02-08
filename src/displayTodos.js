@@ -1,10 +1,5 @@
-function displayTodos(todo) {
+function displayTodos(title, description, dueDate, priority) {
   const todoList = document.getElementById("todo-list");
-  let title = todo.title;
-  let description = todo.description;
-  let dueDate = todo.dueDate;
-  let priority = todo.priority;
-  console.log(title, description, priority, dueDate);
   todoList.innerHTML +=
     "<h3 class='todo-item'>" +
     title +
@@ -25,4 +20,5 @@ function removeTodo() {
     e.target.remove();
   });
 }
+
 export { displayTodos };

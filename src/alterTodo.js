@@ -1,7 +1,6 @@
 import { arrayToSeperateValues } from "./todoLogic.js";
 
 function alterTodo() {
-  // create todo
   let todoArray = [];
   const addBtn = document.querySelector(".newTodoButton");
 
@@ -11,6 +10,7 @@ function alterTodo() {
 
     const submit = document.querySelector(".submitForm");
     submit.addEventListener("click", function (event) {
+      event.stopImmediatePropagation();
       event.preventDefault();
 
       const title = document.getElementById("title").value;
