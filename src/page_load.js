@@ -10,7 +10,8 @@ function loadup() {
   const container = document.getElementById("container");
   const containerContent = document.createElement("div");
   containerContent.id = "containerContent";
-  containerContent.innerHTML = "<h3>Your todo's</h3>";
+  containerContent.innerHTML = "<h3 class='todoTitle'>Your todo's</h3>";
+
   container.append(containerContent);
 
   buttonCreation();
