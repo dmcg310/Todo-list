@@ -26,4 +26,20 @@ body {
   border-right: 5px solid #fff;
   height: 88vh;
   min-width: 12vw;
+  text-align: center;
+  padding: 5px;
+}
+
+#headerText {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#todo-list {
+  background-color: white;
+  margin-top: 10px;
+}
+
+.todo-item {
+  padding: 10px;
 }
