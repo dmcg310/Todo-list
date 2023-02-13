@@ -1,45 +1,209 @@
-* {
-  padding: 0;
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+html {
+	font-family: "Lato", sans-serif;
 }
 
-body {
-  background-color: #274c77;
+* {
+	padding: 0;
+	margin: 0;
 }
 
 #header {
-  display: flex;
-  align-items: center;
-  border-bottom: 5px solid #fff;
-  padding-left: 20px;
-  height: 12vh;
+	display: flex;
+	align-items: center;
+	border-bottom: 10px solid #d2d8ee;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 12vh;
+	color: #fcfaf9;
+	background-color: #4158d0;
+	background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+	font-size: 1.4rem;
+	justify-content: space-between;
+	box-shadow: 0 -8px 10px -6px #000000;
 }
 
 #container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: left;
-  gap: 20px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+	gap: 20px;
+	background-color: #fcfaf9;
+	height: 88vh;
 }
 
 #sidebar {
-  border-right: 5px solid #fff;
-  height: 88vh;
-  min-width: 12vw;
-  text-align: center;
-  padding: 5px;
+	width: 5vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #e8ebf7;
+	color: #fcfaf9;
+	padding: 20px;
+	height: 100vh;
+	font-size: 1.2rem;
+	border-right: 7px solid #d2d8ee;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #headerText {
-  display: flex;
-  flex-direction: column-reverse;
+	display: flex;
+	flex-direction: column-reverse;
 }
 
-#todo-list {
-  background-color: white;
-  margin-top: 10px;
+#rightside {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#removeTodo {
+	background-color: #fcfaf9;
+	border: none;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+#removeTodo:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: 0.4s;
+}
+
+#form-modal {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#form-modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	width: 50vw;
+	text-align: center;
+	border: 5px solid #d2d8ee;
+	border-radius: 12px;
+	font-size: 1.2rem;
+	color: #333333;
+}
+
+#title,
+#description,
+#dueDate,
+#priority {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 12px;
+	border: 3px solid #d2d8ee;
+	font-size: 1.2rem;
+	background-color: #d2d8ee;
+}
+
+#title,
+#description {
+	cursor: text;
+}
+
+#dueDate,
+#priority {
+	cursor: pointer;
+}
+
+#title:focus,
+#description:focus,
+#dueDate:focus,
+#priority:focus {
+	outline: none;
+	background-color: #fefefe;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: 0.4s;
+}
+
+.submitForm {
+	background-color: #16db65;
+	color: white;
+	border: none;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.submitForm:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: 0.4s;
 }
 
 .todo-item {
-  padding: 10px;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 12px;
+	background-color: #fcfaf9;
+	color: #333333;
+	font-size: 1.2rem;
+	border: 5px solid #d2d8ee;
+	display: flex;
+	align-items: center;
+	overflow: scroll;
+}
+
+.todo-item:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: 0.4s;
+}
+
+.newTodoButton {
+	background-color: #16db65;
+	color: white;
+	border: none;
+	padding: 24px;
+	margin: 10px;
+	border-radius: 12px;
+	cursor: pointer;
+	font-size: 1.2rem;
+}
+
+.newTodoButton:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: 0.4s;
+}
+
+.header-subtitle {
+	font-size: 1.2rem;
+}
+
+.header-title {
+	text-decoration: underline;
+}
+
+.darkModeButton {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	border-radius: 100%;
+}
+
+.darkModeButton:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	transition: 0.4s;
+}
+
+.container.dark-mode {
+	background-color: #333333;
+	color: #fcfaf9;
 }
