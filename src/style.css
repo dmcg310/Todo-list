@@ -56,6 +56,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-right: 20px;
 }
 
 #removeTodo {
@@ -206,4 +207,91 @@ html {
 .container.dark-mode {
 	background-color: #333333;
 	color: #fcfaf9;
+}
+
+@media screen and (max-width: 800px) {
+	#header {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#form-modal-content {
+		width: 30vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#sidebar {
+		padding: 40px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#container {
+		flex-direction: column;
+	}
+
+	#sidebar {
+		justify-content: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50vw;
+		height: 5vh;
+		border: 7px solid #d2d8ee;
+		border-radius: 12px;
+		padding: 10px;
+	}
+
+	#rightside {
+		width: 100vw;
+	}
+
+	#form-modal-content {
+		width: 60vw;
+	}
+
+	.todo-item {
+		width: 80vw;
+		font-size: 20px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+
+	.newTodoButton {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+
+	.submitForm {
+		margin-left: auto;
+		margin-right: auto;
+		width: 60vw;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	#header {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#form-modal-content {
+		width: 60vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#sidebar {
+		padding: 20px;
+	}
+
+	.todo-item {
+		font-size: 18px;
+	}
 }
