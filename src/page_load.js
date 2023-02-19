@@ -20,9 +20,12 @@ function loadup() {
 	buttonCreation();
 
 	let modal = document.getElementById("form-modal");
+	let modal2 = document.getElementById("blank-fields-modal");
 	window.onclick = function (event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
+		} else if (event.target == modal2) {
+			modal2.style.display = "none";
 		}
 	};
 }
