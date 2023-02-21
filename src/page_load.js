@@ -29,12 +29,24 @@ function loadup() {
 
   buttonCreation();
 
+<<<<<<< HEAD
   let modal = document.getElementById("form-modal");
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
   };
+=======
+	let modal = document.getElementById("form-modal");
+	let modal2 = document.getElementById("blank-fields-modal");
+	window.onclick = function (event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		} else if (event.target == modal2) {
+			modal2.style.display = "none";
+		}
+	};
+>>>>>>> origin/main
 }
 
 export { loadup };
