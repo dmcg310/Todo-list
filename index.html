@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Todo-list</title>
-	</head>
-	<body>
-		<div id="header"></div>
-		<div id="container">
-			<div id="form-modal" style="display: none">
-				<div id="form-modal-content">
-					<form id="form" method="post">
-						<label for="title">Title</label>
-						<input type="text" id="title" />
-						<label for="description">Description</label>
-						<input type="text" id="description" />
-						<label for="dueDate">Due Date</label>
-						<input type="date" id="dueDate" />
-						<label for="priority">Priority</label>
-						<select name="priority" id="priority">
-							<option value="Low">Low</option>
-							<option value="Medium">Medium</option>
-							<option value="High">High</option>
-						</select>
-						<button type="submit" class="submitForm" id="submitBtn">Add</button>
-					</form>
-				</div>
-			</div>
-			<div id="rightside">
-				<div class="rightside-background">
-					<div id="todo-list"></div>
-				</div>
-			</div>
-		</div>
-		<div id="footer"></div>
-		<script src="main.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-list</title>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="container">
+      <div id="form-modal" style="display: none">
+        <div id="form-modal-content">
+          <form id="form" method="post">
+            <label for="title">Title</label>
+            <input type="text" id="title" />
+            <label for="description">Description</label>
+            <input type="text" id="description" />
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate" />
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            <button type="submit" class="submitForm" id="submitBtn">Add</button>
+          </form>
+        </div>
+      </div>
+      <div id="rightside">
+        <div class="rightside-background">
+          <div id="todo-list"></div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script src="main.js"></script>
+  </body>
 </html>
