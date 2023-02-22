@@ -48,10 +48,35 @@ function displayLocalStorage() {
 	});
 }
 
+function clearTodos() {
+	const clearButton = document.getElementById("clear-todos");
+	const clearButtonModal = document.getElementById("clear-todos-modal");
+	const yesButton = document.getElementById("clearBtn");
+	const noButton = document.getElementById("cancelBtn");
+
+	clearButton.addEventListener("click", () => {
+		clearButtonModal.style.display = "block";
+	});
+
+	yesButton.addEventListener("click", () => {
+		localStorage.clear();
+		const todoList = document.getElementById("todo-list");
+		while (todoList.firstChild) {
+			todoList.removeChild(todoList.firstChild);
+		}
+		clearButtonModal.style.display = "none";
+	});
+
+	noButton.addEventListener("click", () => {
+		clearButtonModal.style.display = "none";
+	});
+}
+
 export {
 	todoCreation,
 	arrayToSeperateValues,
 	getFromLocalStorage,
 	setToLocalStorage,
 	displayLocalStorage,
+	clearTodos,
 };

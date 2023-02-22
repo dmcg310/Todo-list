@@ -34,11 +34,15 @@ function loadup() {
 
 	let modal = document.getElementById("form-modal");
 	let blankModal = document.getElementById("blank-fields-modal");
+	let clearModal = document.getElementById("clear-todos-modal");
+
 	window.onclick = function (event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
 		} else if (event.target == blankModal) {
 			blankModal.style.display = "none";
+		} else if (event.target == clearModal) {
+			clearModal.style.display = "none";
 		}
 	};
 }
