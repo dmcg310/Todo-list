@@ -1,20 +1,22 @@
 import { formatDistance, parseISO } from "date-fns";
+import { getFromLocalStorage } from "./todoLogic.js";
 
 function displayTodos(title, description, dueDate, priority) {
-  const todoList = document.getElementById("todo-list");
+	getFromLocalStorage();
+	const todoList = document.getElementById("todo-list");
 
-  let difference;
+	let difference;
 
-  if (dueDate === "") {
-    dueDate = "No due date";
-    difference = "";
-  } else {
-    difference = formatDistance(parseISO(dueDate), new Date(), {
-      addSuffix: true,
-    });
-  }
+	if (dueDate === "") {
+		dueDate = "No due date";
+		difference = "";
+	} else {
+		difference = formatDistance(parseISO(dueDate), new Date(), {
+			addSuffix: true,
+		});
+	}
 
-  todoList.innerHTML += `<h3 class='todo-item'> 
+	todoList.innerHTML += `<h3 class='todo-item'> 
       ${title}\u00A0\u00A0\u00A0|
       ${description}\u00A0\u00A0|
       Due: ${dueDate} ${difference}\u00A0\u00A0|
@@ -25,16 +27,16 @@ function displayTodos(title, description, dueDate, priority) {
       <path d="M2 12l5 5m5 -5l5 -5" />
     </svg></button>
     </h3>`;
-  removeTodo();
+	removeTodo();
 }
 
 function removeTodo() {
-  const removeTodoButton = document.getElementById("removeTodo");
-  if (removeTodoButton === null) return;
-  removeTodoButton.addEventListener("click", (e) => {
-    e.currentTarget.parentNode.remove();
-    removeTodo();
-  });
+	const removeTodoButton = document.querySelectorAll("#removeTodo");
+	removeTodoButton.forEach((button) => {
+		button.addEventListener("click", (e) => {
+			e.currentTarget.parentNode.remove();
+		});
+	});
 }
 
 export { displayTodos };
