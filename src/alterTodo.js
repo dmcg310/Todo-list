@@ -26,10 +26,13 @@ function alterTodo() {
 			}
 
 			todoForm.reset();
+
 			form.style.display = "none";
 
 			todoArray.push(title, description, dueDate, priority);
+
 			arrayToSeperateValues(todoArray);
+
 			todoArray = [];
 		});
 	});

@@ -97,7 +97,8 @@ html {
 }
 
 #blank-fields-modal,
-#clear-todos-modal {
+#clear-todos-modal,
+#no-todos-modal {
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -111,7 +112,8 @@ html {
 }
 
 #blank-fields-modal-content,
-#clear-todos-content {
+#clear-todos-content,
+#no-todos-content {
 	background-color: #fefefe;
 	margin-left: auto;
 	margin-right: auto;
@@ -288,6 +290,7 @@ html {
 		border: 7px solid #d2d8ee;
 		border-radius: 12px;
 		padding: 10px;
+		background-color: #fefefe;
 	}
 
 	#rightside {
@@ -295,7 +298,8 @@ html {
 	}
 
 	#form-modal-content,
-	#clear-todos-content {
+	#clear-todos-content,
+	#no-todos-content {
 		width: 60vw;
 	}
 
@@ -319,6 +323,7 @@ html {
 	#clear-todos {
 		width: 20vw;
 	}
+
 	.newTodoButton,
 	#clear-todos {
 		margin-left: auto;

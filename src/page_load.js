@@ -50,9 +50,10 @@ function loadup() {
 
 	buttonCreation();
 
-	let modal = document.getElementById("form-modal");
-	let blankModal = document.getElementById("blank-fields-modal");
-	let clearModal = document.getElementById("clear-todos-modal");
+	const modal = document.getElementById("form-modal");
+	const blankModal = document.getElementById("blank-fields-modal");
+	const clearModal = document.getElementById("clear-todos-modal");
+	const noTodoModal = document.getElementById("no-todos-modal");
 
 	window.onclick = function (event) {
 		if (event.target == modal) {
@@ -61,6 +62,8 @@ function loadup() {
 			blankModal.style.display = "none";
 		} else if (event.target == clearModal) {
 			clearModal.style.display = "none";
+		} else if (event.target == noTodoModal) {
+			noTodoModal.style.display = "none";
 		}
 	};
 

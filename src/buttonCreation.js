@@ -3,6 +3,7 @@ import { clearTodos } from "./todoLogic.js";
 
 function buttonCreation() {
 	const container = document.getElementById("container");
+
 	const addTodoDiv = document.createElement("div");
 	addTodoDiv.id = "sidebar";
 
